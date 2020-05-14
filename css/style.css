@@ -24,7 +24,6 @@ h1 {
 }
 
 .gameboard {
-    background-color: azure;
     display: flex;
     flex-direction: column;
     height: 300px;
@@ -40,6 +39,10 @@ h1 {
 }
 
 .gameboard__row--col {
-    background-color: aliceblue;
     border: 1px solid #000;
+}
+
+#btnPlayAgain {
+    margin-top: 25px;
+    visibility: hidden;
 }
