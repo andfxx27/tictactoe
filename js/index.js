@@ -3,6 +3,7 @@ const container = document.getElementById('container');
 const gameboard = document.getElementById('gameboard');
 const gameboardRows = document.getElementsByClassName('gameboard__row');
 const gameboardColumns = document.getElementsByClassName('gameboard__row--col');
+const winnerText = document.getElementById('winnerText');
 
 let index = 1;
 
