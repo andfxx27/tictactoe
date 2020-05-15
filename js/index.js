@@ -5,7 +5,7 @@ const gameboardRows = document.getElementsByClassName('gameboard__row');
 const gameboardColumns = document.getElementsByClassName('gameboard__row--col');
 const winnerText = document.getElementById('winnerText');
 
-let index = 1;
+let index = 0;
 
 // Style each box height and width
 for (const column of gameboardColumns) {
