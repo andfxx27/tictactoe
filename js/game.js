@@ -10,10 +10,19 @@ const winConditions = [
 ];
 
 // Initially, the board is empty so all box is 0
-let gameSession = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-let url = '';
-let turn = 'x';
-let winner = '';
+let gameSession;
+let url;
+let turn;
+let winner;
+
+function initializeGameVariable() {
+    gameSession = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    url = '';
+    turn = 'x';
+    winner = '';
+}
+
+initializeGameVariable();
 
 // EventListener for click event on each box
 for (const column of gameboardColumns) {
@@ -53,7 +62,7 @@ function checkWinner(gameSession) {
             winner = (turn === 'o') ? 'x' : 'o';
             btnPlayAgain.style.visibility = 'visible';
             winnerText.style.visibility = 'visible';
-            winnerText.innerText = `The winner is ${winner}!`;
+            winnerText.innerText = `The winner is ${winner.toUpperCase()}!`;
         }
     }
 }
@@ -67,8 +76,5 @@ btnPlayAgain.addEventListener('click', function () {
     btnPlayAgain.style.visibility = 'hidden';
     winnerText.style.visibility = 'hidden';
 
-    gameSession = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-    url = '';
-    turn = 'x';
-    winner = '';
+    initializeGameVariable();
 });

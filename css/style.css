@@ -48,6 +48,7 @@ h1 {
 }
 
 #winnerText {
+    font-size: 2rem;
     margin-top: 25px;
     visibility: hidden;
 }
