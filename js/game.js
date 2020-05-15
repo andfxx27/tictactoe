@@ -27,12 +27,14 @@ initializeGameVariable();
 // EventListener for click event on each box
 for (const column of gameboardColumns) {
     column.addEventListener('click', function () {
-        // Fill the respective box in the board with the turn
-        gameSession[column.tag] = turn;
 
         // Only allow box to be filled if it is still empty (which means, btnPlayAgain is hidden)
         if (window.getComputedStyle(btnPlayAgain).visibility === 'hidden') {
+
             if (column.childElementCount === 0) {
+                // Fill the respective box in the board with the turn -> change the turn if the box isn't filled yet
+                gameSession[column.tag] = turn;
+
                 if (turn === 'x') {
                     url = 'asset/cross.jpg';
                     turn = 'o';
