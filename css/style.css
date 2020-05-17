@@ -23,6 +23,10 @@ h1 {
     text-align: center;
 }
 
+.instruction-text {
+    font-size: 1.5rem;
+}
+
 .gameboard {
     display: flex;
     flex-direction: column;
